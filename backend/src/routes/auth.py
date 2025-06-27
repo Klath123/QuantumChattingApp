@@ -68,9 +68,9 @@ async def verify_otp_and_login(data: dict, response: Response):
     response.set_cookie(
         key="access_token",
         value=token,
-        httponly=True,
+        httponly=False,
         secure=True,        # ✅ Set to True in production (with HTTPS)
-        samesite=None,      # ✅ Lax is fine for most cases
+        samesite="Lax",      # ✅ Lax is fine for most cases
         max_age=7 * 24 * 60 * 60,
         path="/"             # ✅ CRITICAL: ensures the cookie is sent to all endpoints
     )
