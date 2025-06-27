@@ -26,10 +26,10 @@ async def login(data: UserLogin, response: Response, background_tasks: Backgroun
     }
 
 
-@authRouter.post("/logout")
-def logout(response: Response):
-    response.delete_cookie("access_token")
-    return {"message": "Logged out"}
+# @authRouter.post("/logout")
+# def logout(response: Response):
+#     response.delete_cookie("access_token")
+#     return {"message": "Logged out"}
 
 
 @authRouter.post("/send-otp")
