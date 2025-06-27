@@ -80,5 +80,20 @@ async def verify_otp_and_login(data: dict, response: Response):
         "msg": "Login successful"
     }
 
+@authRouter.get("/debug-token")
+async def debug_token():
+    try:
+        test_token = create_token({"sub": "test_user"})
+        return {
+            "success": True,
+            "token_preview": test_token[:20] + "...",
+            "config": {
+                "has_secret": bool(Config.SECRET_KEY),
+                "algorithm": Config.ALGORITHM,
+                "expire_minutes": Config.ACCESS_TOKEN_EXPIRE_MINUTES
+            }
+        }
+    except Exception as e:
+        return {"error": str(e)}
 
 
