@@ -416,7 +416,7 @@ export default function WebSocketChatBox({ peer }) {
       }
 
       setIsConnecting(true);
-      const ws = new WebSocket("ws://quantumchattingapp-backend.onrender.com/api/v1/ws/chat");
+      const ws = new WebSocket("wss://quantumchattingapp-backend.onrender.com/api/v1/ws/chat");
       socket.current = ws;
 
       ws.onopen = () => {
