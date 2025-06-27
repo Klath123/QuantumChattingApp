@@ -1,7 +1,7 @@
 from fastapi import APIRouter,Response,BackgroundTasks,HTTPException
-from src.utils.auth import register_user, authenticate_user,send_otp,verify_login_otp
+from src.utils.auth import register_user, authenticate_user,send_otp,verify_login_otp,create_token
 from src.models.auth import UserRegister,UserLogin,OTPVerification,OTPRequest
-
+from src.config import Config
 authRouter = APIRouter() 
 
 @authRouter.post("/register")
