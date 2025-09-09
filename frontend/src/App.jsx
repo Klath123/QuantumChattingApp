@@ -11,7 +11,7 @@ import { useAuthStore } from './context/useAuthStore';
 import axios from 'axios';
 import './App.css'
 
-axios.defaults.baseURL = "https://quantumchattingapp-backend.onrender.com/";
+axios.defaults.baseURL = import.meta.BACKEND_URL || "http://localhost:8000/";
 axios.defaults.withCredentials = true;
 function App() {
   const fetchUser = useAuthStore((state) => state.fetchUser);

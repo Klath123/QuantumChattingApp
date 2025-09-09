@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
-    "https://quantumchattingapp-frontend.onrender.com",  # your frontend origin
+    "https://quantumchattingapp-frontend.onrender.com",
+     "http://localhost:5173/"
 ]
 
 def corsPolicy(app: FastAPI):
