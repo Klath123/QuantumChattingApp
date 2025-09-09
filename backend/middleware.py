@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
     "https://quantumchattingapp-frontend.onrender.com",
-     "http://localhost:5173/"
+     "http://localhost:5173"
 ]
 
 def corsPolicy(app: FastAPI):

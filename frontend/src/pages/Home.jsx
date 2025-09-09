@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Navbar from '../components/navbar';
 export default function Home() {
   return (
+
     <div className=" bg-white">
+      <Navbar />
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-20 mt-10">
         <div className="text-center">
